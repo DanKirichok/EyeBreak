@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "EyeBreak",
+	"version": "0.1",
+	"browser_action": {},
+	"content_scripts": [
+	  {
+		"matches": [
+		  "<all_urls>"
+		],
+		"js": [
+			"jquery-3.4.1.js",
+			"content.js"
+		],
+		"css": [
+			"style.css"
+		]
+	  }
+	],
+	"background": {
+	  "scripts": ["jquery-3.4.1.js", "background.js"]
+	}
+}

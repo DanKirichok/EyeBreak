@@ -1,0 +1,81 @@
+#break-screen {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #c9e9f6;
+	z-index: 10000001;
+}
+
+.inner-text {
+	text-align: center;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	margin-top: 18%;
+	font-size: 40px;
+	font-weight: strong;
+}
+
+/*Credit to the Spinner from https://codepen.io/alangf/pen/qrxjRL */
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.leftHalf, .rightHalf, .spinner {
+  top: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.leftHalf {
+  left: 0;
+  background: #c9e9f6;
+  z-index: 3;
+  opacity: 1;
+  -webkit-animation: showHide 20s infinite steps(1, end);
+  border-radius: 100% 0 0 100%/ 50% 0 0 50%;
+}
+
+.rightHalf {
+  right: 0;
+  background: #45b3e0;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: showHide 20s infinite steps(1, end) reverse;
+  border-radius: 0 100% 100% 0/ 0 50% 50% 0;
+}
+
+.spinner {
+  overflow: hidden;
+  left: 0;
+  background: #45b3e0;
+  -webkit-animation: spin 20s linear infinite;
+  -webkit-transform-origin: center right;
+  z-index: 2;
+  border-radius: 100% 0 0 100%/ 50% 0 0 50%;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes showHide {
+  0% {
+    opacity: 1;
+  }
+  
+  50%, 100% {
+    opacity: 0;
+  }
+}
