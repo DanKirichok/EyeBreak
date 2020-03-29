@@ -2,9 +2,11 @@
 	"manifest_version": 2,
 	"name": "EyeBreak",
 	"version": "0.1",
+	"description": "Reminds you to take a 20 second break every 20 minutes to rest your eyes.",
 	"browser_action": {
 		"default_popup" : "popup.html"
 	  },
+	"icons": { "128": "logo.png" },
 	"content_scripts": [
 	  {
 		"matches": [
