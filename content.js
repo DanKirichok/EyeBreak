@@ -21,7 +21,6 @@ chrome.extension.sendRequest({cmd: "read_file"}, function(html){
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		if( request.message === "timer_hit" ) {
-			console.log("FIRED ALARM");
 			var onBreak = true;
 			document.body.appendChild( div );
 			$("#break-screen").html(ht);
